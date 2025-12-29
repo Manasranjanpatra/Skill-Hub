@@ -1,4 +1,4 @@
-# Eduyata Platform - Structured Backend
+
 
 ## Project Structure
 ```
@@ -58,8 +58,8 @@ CREATE DATABASE eduyata_db;
 - Host: `localhost`
 - Port: `3306`
 - Database: `eduyata_db`
-- Username: `root`
-- Password: `root`
+- Username: `Enter Your Username`
+- Password: `Enter Your Username`
 
 *Note: Update credentials in `backend/src/main/resources/application.properties` if different*
 
@@ -142,35 +142,7 @@ npm install
 - Frontend should be on port 5173
 - CORS is configured for both ports
 
-## Backend Architecture
 
-### Models (Entity Layer)
-- **Student.java** - Student entity with profile management
-- **Educator.java** - Teacher entity with approval workflow
-- **Course.java** - Course entity with instructor relationships
-- **Enrollment.java** - Student-course enrollment tracking
-
-### Repositories (Data Access Layer)
-- **StudentRepository.java** - Student data operations
-- **EducatorRepository.java** - Teacher data operations
-- **CourseRepository.java** - Course data operations
-- **EnrollmentRepository.java** - Enrollment data operations
-
-### Services (Business Logic Layer)
-- **StudentService.java** - Student business logic
-- **EducatorService.java** - Teacher business logic
-- **CourseService.java** - Course management logic
-
-### Controllers (API Layer)
-- **StudentController.java** - Student authentication & profile APIs
-- **EducatorController.java** - Teacher management APIs
-- **CourseController.java** - Course & enrollment APIs
-
-### Configuration
-- **SecurityConfig.java** - Spring Security configuration
-- **application.properties** - Database and app configuration
-
-## API Endpoints
 
 ### Authentication
 - `POST /api/auth/student/register` - Student registration
@@ -225,43 +197,4 @@ cd frontend
 npm run build
 # Deploy dist/ folder to web server
 ```
-
-## Test Login Credentials
-- **Student**: Use any student ID with password: `123456789` (master password)
-- **Teacher**: Register through the application
-- **Admin**: Configure in database
-
-## Configuration Files
-
-### Backend Configuration
-**File:** `backend/src/main/resources/application.properties`
-```properties
-# Database
-spring.datasource.url=jdbc:mysql://localhost:3306/eduyata_db
-spring.datasource.username=root
-spring.datasource.password=root
-
-# Server
-server.port=8080
-
-# JPA/Hibernate
-spring.jpa.hibernate.ddl-auto=create-drop
-spring.jpa.show-sql=true
-```
-
-### Frontend Configuration
-**File:** `frontend/vite.config.ts`
-```typescript
-export default defineConfig({
-  server: {
-    port: 5173
-  }
-})
-```
-
-## Support
-For issues or questions:
-- Check the troubleshooting section above
-- Ensure all prerequisites are installed
-- Verify database connection
-- Check console logs for detailed error messages
+`
